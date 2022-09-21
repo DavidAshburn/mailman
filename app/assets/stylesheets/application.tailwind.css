@@ -5,6 +5,66 @@
 
 @layer components {
   .btn-primary {
-    @apply py-2 px-4 m-4 bg-gradient-to-r from-yellow-300 via-amber-400 to-orange-500 rounded-full;
+    @apply py-2 px-4 m-4 bg-gradient-to-r from-yellow-300 via-amber-400 to-orange-500 rounded-full font-raleway font-bold text-zinc-700;
   }
+
+  .btn-secondary {
+    @apply py-2 px-4 m-4 bg-gradient-to-r from-cyan-300 via-teal-400 to-emerald-500 rounded-full;
+  }
+
+  .buck-title {
+    @apply font-bold md:text-8xl sm:text-6xl text-5xl font-monoton sm:ml-0 ml-28 transition-all ease-in;
+  }
+
+  .buck-titlebox {
+    @apply flex flex-row mt-10 mr-10 sm:justify-end justify-center items-end transition-all ease-in;
+  }
+}
+
+
+.btn-group {
+  display: flex;
+  padding: 1rem 2rem;
+
+}
+.group-button {
+  background-color: white;
+  color: black;
+
+  text-decoration: none;
+  margin: 0;
+  padding: 1rem 2rem;
+}
+
+
+.btn-group .group-button:first-child {
+  border-radius: 3.2rem 0 0 .8rem;
+}
+
+.btn-group .group-button:not(:last-child) {
+  border-right: none;
+}
+
+.btn-group .group-button:not(:first-child) {
+  border-left: 1px solid colors.$border;
+}
+
+.btn-group .group-button:last-child {
+  border-radius: 0 .8rem 3.2rem 0;
+}
+
+.group-button:hover {
+  background-color: black;
+  color: white;
+}
+
+.group-button:active {
+  background-color: white;
+  color: black;
+}
+
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
 }
