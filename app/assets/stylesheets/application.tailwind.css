@@ -9,7 +9,7 @@
   }
 
   .btn-secondary {
-    @apply py-2 px-4 m-4 bg-gradient-to-r from-cyan-300 via-teal-400 to-emerald-500 rounded-full;
+    @apply py-2 px-4 m-4 bg-gradient-to-r from-cyan-300 via-teal-400 to-emerald-500 rounded-full font-raleway font-bold text-zinc-700;
   }
 
   .buck-title {
@@ -67,4 +67,118 @@
   content: "";
   clear: both;
   display: table;
+}
+
+nav {
+  position: sticky;
+  top: 10px;
+  left: 0;
+  height: 3rem;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-right: 2rem;
+  background-color: #1e3a8a;
+  color: #fcd34d;
+  border-radius: 2rem 0 0 2rem;
+}
+
+.nav-img-link {
+  border-radius: 50%;
+  height: 3rem;
+  min-width: 3rem;
+  display: block;
+}
+
+.nav-link {
+  font-size: 14pt;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fcd34d;
+  padding: .6rem 1.2rem;
+} 
+.nav-link:hover {
+  color: #fdfcdc;
+}
+
+.nav-link-info {
+  font-size: 14pt;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fdfcdc;
+}
+.nav-link-info:hover {
+  color:#003d5b;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.nav-dropdown {
+  float: left;
+  overflow: hidden;
+  padding: .6rem 1.2rem;
+}
+
+.nav-drop-btn {
+  font-size: 14pt;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fcd34d;
+  border: none;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  cursor: pointer;
+}
+
+.nav-drop-btn:hover {
+  color: #fdfcdc;
+}
+
+
+.nav-drop-content {
+  position: absolute;
+  background-color: #00afb9;
+  color: #003d5b;
+  min-width: 160px;
+  box-shadow: 3px 8px 8px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  background: linear-gradient(180deg, #1e3a8a 0%, #38bdf8 100%);
+}
+
+.nav-link {
+  float: none;
+  padding: .6rem 1.2rem;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  cursor: pointer;
+}
+
+.nav-drop-btn {
+  padding: .6rem 1.2rem;
+  cursor: pointer;
+}
+
+.nav-drop-btn:hover {
+  color: #fdfcdc;
+}
+
+.nav-remember {
+  display: flex;
+  align-items: center;
+  padding-left: 3rem;
+  padding-top: 1rem;
 }

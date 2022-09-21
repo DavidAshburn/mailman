@@ -8,5 +8,8 @@
   </div>
   <div class="flex justify-end mr-10 sm:justify-end justify-center md:mr-8 md:ml-0 ml-44 transition-all ease-in">
       <%= link_to "Register", new_user_registration_path, class:"btn-primary" %>
+      <% if user_signed_in? %>
+        <%= link_to "Sign Out", destroy_user_session_path, class:"btn-secondary" %>
+      <% end %>
   </div>
 </div>
