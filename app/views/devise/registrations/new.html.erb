@@ -17,7 +17,7 @@
         <div class="field">
           <%= f.password_field :password_confirmation, placeholder: "repeat-password", class:"rounded-lg font-righteous text-lg md:mr-20 mt-3" %><br />
           <% if @minimum_password_length %>
-            <em class="font-righteous md:ml-8 ml-20 text-zinc-700">( <%= @minimum_password_length %> characters minimum )</em>
+            <em class="font-righteous md:ml-8 text-zinc-700">( <%= @minimum_password_length %> characters minimum )</em>
           <% end %>
         </div>
 
@@ -26,7 +26,7 @@
         </div>
       </div>
     <% end %>
-  <div class="flex flex-col md:items-end items-center md:pr-20">
+  <div class="flex flex-col md:items-end items-center md:mr-12">
     <%= render "devise/shared/links" %>
   </div>
 </div>
