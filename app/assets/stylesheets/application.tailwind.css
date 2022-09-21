@@ -33,7 +33,7 @@
   }
 
   .btn-group .group-button:not(:last-child) {
-    @apply border-l border-l-indigo-800 border-r-0 border-l-0;
+    @apply border-l border-l-indigo-800 border-r-0;
   }
 
   .btn-group .group-button:not(:first-child) {
@@ -41,7 +41,7 @@
   }
 
   .btn-group .group-button:last-child {
-    @apply rounded-l-none rounded-tr-[.8rem] rounded-br-[3.2rem];
+    @apply rounded-l-none rounded-tr-[.8rem] rounded-br-[3.2rem] border-r-2;
   }
 
   .group-button:hover {
