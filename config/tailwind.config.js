@@ -11,6 +11,9 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+        'raleway': ['Raleway', 'sans-serif'],
+        'monoton': ['Monoton', 'cursive'],
+        'righteous': ['Righteous', 'cursive'],
       },
     },
   },
