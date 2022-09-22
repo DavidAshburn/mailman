@@ -41,15 +41,15 @@
   }
 
   .group-button {
-    @apply no-underline m-0 py-4 px-8 bg-gradient-to-t from-cyan-500 to-sky-600 font-raleway font-bold text-zinc-700;
+    @apply no-underline m-0 py-4 px-8 border-b-2 border-blue-500 bg-gradient-to-t from-cyan-300 via-sky-400 to-blue-500 font-raleway font-bold text-gray-700 shadow-[inset_0_-2px_4px_rgba(220,220,255,0.2)];
   }
 
   .btn-group .group-button:first-child {
-    @apply rounded-tl-[3.2rem] rounded-bl-[.8rem] rounded-r-none;
+    @apply rounded-tl-[3.2rem] rounded-bl-[.8rem] rounded-r-none ;
   }
 
   .btn-group .group-button:not(:last-child) {
-    @apply border-l border-l-indigo-800 border-r-0;
+    @apply border-r-0;
   }
 
   .btn-group .group-button:not(:first-child) {
@@ -57,7 +57,7 @@
   }
 
   .btn-group .group-button:last-child {
-    @apply rounded-l-none rounded-tr-[.8rem] rounded-br-[3.2rem] border-r-2;
+    @apply rounded-l-none rounded-tr-[.8rem] rounded-br-[3.2rem];
   }
 
   .group-button:hover {
