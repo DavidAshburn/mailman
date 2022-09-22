@@ -1,15 +1,13 @@
-<div>
-  <div class="flex flex-row mt-10 mr-10 sm:justify-end justify-center items-end transition-all ease-in">
-      <h1 class="font-bold md:text-8xl sm:text-6xl text-4xl font-monoton sm:ml-0 ml-28 transition-all ease-in">MailMan</h1>
-      <%= image_tag("mail.png", class:"w-5 h-5 mb-2 rounded-full bg-yellow-400") %>
-  </div>
-  <div class="flex flex-row sm:mr-12 sm:text-base mr-2 text-xs sm:justify-end justify-center items-end transition-all ease-in">
-    <p class="font-bold text-xl font-righteous">Because you're smarter than this</p>
-  </div>
-  <div class="flex justify-end mr-10 sm:justify-end justify-center md:mr-8 md:ml-0 ml-44 transition-all ease-in">
-      <%= link_to "Register", new_user_registration_path, class:"btn-primary" %>
-      <% if user_signed_in? %>
-        <%= link_to "Sign Out", destroy_user_session_path, class:"btn-secondary" %>
-      <% end %>
-  </div>
+<div class="flex flex-row mt-10 mr-10 sm:justify-end justify-center items-end transition-all ease-in">
+  <h1 class="font-bold md:text-8xl sm:text-6xl text-4xl font-monoton sm:ml-0 ml-28 transition-all ease-in">MailMan</h1>
+  <%= image_tag("mail.png", class:"w-5 h-5 mb-2 rounded-full bg-yellow-400 border-2 border-yellow-400") %>
+</div>
+<div class="flex flex-row sm:mr-12 sm:text-base mr-2 text-xs sm:justify-end justify-center items-end transition-all ease-in">
+  <p class="font-bold text-xl font-righteous">Because you're smarter than this</p>
+</div>
+<div class="flex justify-end mr-10 sm:justify-end justify-center md:mr-8 md:ml-0 ml-28 transition-all ease-in">
+  <% if !user_signed_in? %>
+    <%= link_to "Register", new_user_registration_path, class:"btn-primary" %>
+    <%= link_to "Sign In", new_user_session_path, class: "btn-secondary" %>
+  <% end %>
 </div>

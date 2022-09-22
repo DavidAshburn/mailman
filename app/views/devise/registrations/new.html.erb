@@ -10,17 +10,14 @@
           <%= f.email_field :email, autofocus: true, placeholder: "e-mail", class:"rounded-lg font-righteous text-lg md:mr-20 mt-8 mb-8" %>
         </div>
         <div class="field">
-          
           <%= f.password_field :password, placeholder: "new-password", class:"rounded-lg font-righteous text-lg md:mr-20" %>
         </div>
-
         <div class="field">
           <%= f.password_field :password_confirmation, placeholder: "repeat-password", class:"rounded-lg font-righteous text-lg md:mr-20 mt-3" %><br />
           <% if @minimum_password_length %>
             <em class="font-righteous md:ml-8 text-zinc-700">( <%= @minimum_password_length %> characters minimum )</em>
           <% end %>
         </div>
-
         <div class="actions">
           <%= f.submit "Sign up", class:"btn-primary md:mr-20" %>
         </div>
