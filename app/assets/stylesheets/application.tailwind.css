@@ -2,14 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+    @variants responsive {
+        .text-shadow {
+          text-shadow: 2px 2px 4px black;
+        }
+        .text-shadow-md {
+          text-shadow: 4px 4px 8px black;
+        }
+        .text-shadow-lg {
+          text-shadow: 15px 15px 30px black;
+        }
+        .text-shadow-none {
+          text-shadow: none;
+        }
+    } 
+}
 
 @layer components {
   .btn-primary {
-    @apply py-2 px-4 m-4 min-w-fit bg-gradient-to-t from-yellow-300 via-amber-400 to-orange-500 rounded-full font-raleway font-bold text-gray-700 shadow-[inset_0_-2px_4px_rgba(255,255,255,0.5)];
+    @apply py-2 px-4 m-4 min-w-fit border-b-2 border-orange-600 bg-gradient-to-t from-yellow-300 via-amber-400 to-orange-500 rounded-full font-raleway font-bold text-gray-700 shadow-[inset_0_-2px_4px_rgba(255,255,255,0.5)];
   }
 
   .btn-secondary {
-    @apply py-2 px-4 m-4 min-w-fit bg-gradient-to-t from-cyan-300 via-sky-400 to-blue-500 rounded-full font-raleway font-bold text-gray-700 shadow-[inset_0_-2px_4px_rgba(220,220,255,0.2)];
+    @apply py-2 px-4 m-4 min-w-fit border-b-2 border-blue-500 bg-gradient-to-t from-cyan-300 via-sky-400 to-blue-500 rounded-full font-raleway font-bold text-gray-700 shadow-[inset_0_-2px_4px_rgba(220,220,255,0.2)];
   }
 
   .buck-title {
@@ -51,10 +67,8 @@
   .group-button:active {
     @apply bg-white text-black;
   }
-}
 
-.btn-group:after {
-  content: "";
-  clear: both;
-  display: table;
+  .btn-group:after {
+    @apply content-none clear-both table;
+  }
 }

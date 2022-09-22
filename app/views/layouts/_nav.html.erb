@@ -2,7 +2,7 @@
   <div class="flex justify-start items-center">
     <%= link_to image_tag('mail.png', class:"min-w-[3rem] w-12 h-12 rounded-full bg-yellow-400 border-4 border-yellow-400"), root_path %>
     <div class="overflow-hidden float-left px-2.5 py-5">
-      <button class="flex font-righteous text-bold text-xl no-underline text-yellow-300 hover:text-white my-2 ml-2" data-action="navbar#showDrop">Leads</button>
+      <button class="flex font-righteous text-bold text-xl no-underline text-yellow-300 hover:text-white my-2 ml-2" data-action="navbar#showDrop navbar#hideDropAlt">Leads</button>
       <div class="bg-blue-700 z-20 shadow-small min-w-[180px] hidden absolute rounded-b-xl" data-navbar-target="maindrop">
         <%= link_to "My Leads", leads_path, class:"flex font-righteous text-bold text-lg no-underline text-yellow-300 hover:text-white ml-2 my-2" %>
         <%= link_to "Add a Lead", new_lead_path, class:"flex font-righteous text-bold text-lg no-underline text-yellow-300 hover:text-white ml-2 my-2" %>
@@ -12,8 +12,8 @@
     </div>
   </div>
   <div class="overflow-hidden flex min-w-fit">
-    <div class="overflow-hidden px-2.5 py-5 flex sm:hidden">
-      <button class="flex font-righteous text-bold text-xl no-underline text-yellow-300 hover:text-white my-2 ml-2" data-action="navbar#showDropAlt">Links</button>
+    <div class="overflow-hidden px-2.5 py-2 flex sm:hidden">
+      <button class="flex font-righteous text-bold text-xl no-underline text-yellow-300 hover:text-white my-2 ml-2" data-action="navbar#showDropAlt navbar#hideDrop">Links</button>
         <div class="bg-blue-700 z-20 shadow-small min-w-[180px] hidden absolute rounded-b-xl right-5" data-navbar-target="altdrop">
           <%= link_to "Profile", home_profile_path, class:"flex font-righteous text-bold text-lg no-underline text-yellow-300 hover:text-white ml-2 my-2" %>
           <%= link_to "About", home_about_path, class:"flex font-righteous text-bold text-lg no-underline text-yellow-300 hover:text-white ml-2 my-2" %>
@@ -22,9 +22,9 @@
         </div>
     </div>
     <div class="flex justify-end items-center">
-      <%= link_to "Profile", home_profile_path, class:"font-righteous text-bold text-lg no-underline text-slate-50 px-2.5 py-5 hover:text-yellow-300 hidden sm:flex"%>
-      <%= link_to "About", home_about_path, class:"font-righteous text-bold text-lg no-underline text-slate-50 px-2.5 py-5 hover:text-yellow-300 hidden sm:flex"%>
-      <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class:"font-righteous text-bold text-xl no-underline text-amber-400 px-2.5 py-5 hover:text-white hidden sm:flex" %>
+      <%= link_to "Profile", home_profile_path, class:"font-righteous text-bold text-lg no-underline text-slate-50 px-2.5 py-2 hover:text-yellow-300 hidden sm:flex"%>
+      <%= link_to "About", home_about_path, class:"font-righteous text-bold text-lg no-underline text-slate-50 px-2.5 py-2 hover:text-yellow-300 hidden sm:flex"%>
+      <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class:"font-righteous text-bold text-xl no-underline text-amber-400 px-2.5 py-2 hover:text-white hidden sm:flex" %>
     </div>
   </div>
 </nav>
